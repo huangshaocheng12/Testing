@@ -7,14 +7,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 80%;
         height: 100vh;
-        background-color: #0b0b0b;
+        background-color: #fbf9f9;
+
     }
     
     .slider-container {
         position: relative;
         overflow: hidden;
         width: 80%;
+        height: 40%;
         max-width: 1800px;
         margin: 0 auto;
     }
@@ -92,7 +95,7 @@ function nextSlide() {
 }
 
 function updateSlider() {
-    slider.style.transform = `translateX(${-counter * slideWidth}px)`;
+    slider.style.transform = `translateX(${-counter * 100}%)`;
 }
 
 let autoplayInterval;
