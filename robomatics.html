@@ -107,8 +107,8 @@ img {
     </style>
 </head>
 <body>
-    <div class="slideshow-container"style="text-align: center;">
-        <div class="mySlides fade">
+    <div class="slideshow-container">
+        <div class="mySlides fade" style="text-align: center;">
             <div class="numbertext">1 / 3</div>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Gyw6raVB5suQRaOGnUDmKonPbai29SRDzHga_StgIB96fY3HipJsIuQgToY7VX8USRk&usqp=CAU" style="width:57%" >
             <div class="text">Caption Text</div>
@@ -157,19 +157,19 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 // Auto Slide   if you need auto slide ,remove the commit "//"
-//var slideIndex = 0;
-//showSlides();
-//function showSlides() {
-    //var i;
-  //  var slides = document.getElementsByClassName("mySlides");
-   // for (i = 0; i < slides.length; i++) {
-   //     slides[i].style.display = "none";
-   // }
-  //  slideIndex++;
-   // if (slideIndex > slides.length) { slideIndex = 1 }
-   // slides[slideIndex - 1].style.display = "block";
-   // setTimeout(showSlides, 2000); // Change image every 2 seconds
-//}
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
     </script>
 </body>
 </html>
